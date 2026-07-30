@@ -52,28 +52,6 @@
         .form-btn { width: 100%; background: var(--accent); color: white; border: none; padding: 14px; border-radius: 6px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: 0.2s; }
         .form-btn:hover { background: var(--accent-hover); }
 
-        /* Success Message State */
-        .form-success-message {
-            display: none;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        .form-success-message h3 { color: var(--dark); font-size: 1.4rem; margin-bottom: 8px; }
-        .form-success-message p { color: var(--text-light); font-size: 0.9rem; }
-        .success-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(34, 197, 94, 0.15);
-            color: #22c55e;
-            border: 2px solid #22c55e;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin: 0 auto 12px auto;
-        }
-
         /* Trust Stats Section */
         .stats { background: var(--slate); color: white; padding: 40px 20px; text-align: center; border-bottom: 1px solid #334155; }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
@@ -175,39 +153,31 @@
         <p>Comprehensive high-resolution aerial scans of your roof, siding, soffits, and gutters. Spot wear, weather impacts, and hard-to-see defects before costly damage occurs.</p>
 
         <div class="lead-card" id="contact">
-            <div id="formWrapper">
-                <h3>Request Your Free Drone Scan</h3>
-                <p>No deposit. No obligations. Detailed estimate included.</p>
-                <form id="inspectionForm" action="https://formsubmit.co/ajax/durkben@gmail.com" method="POST">
-                    
-                    <input type="hidden" name="_subject" value="New Roof & Siding Inspection Lead!">
-                    <input type="hidden" name="_captcha" value="false">
+            <h3>Request Your Free Drone Scan</h3>
+            <p>No deposit. No obligations. Detailed estimate included.</p>
+            <form action="https://formsubmit.co/durkben@gmail.com" method="POST">
+                
+                <input type="hidden" name="_subject" value="New Roof & Siding Inspection Lead!">
+                <input type="hidden" name="_captcha" value="false">
 
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" placeholder="John Smith" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="tel" name="phone" placeholder="(920) 555-0199" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Property Address</label>
-                        <input type="text" name="address" placeholder="Street Address, City" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Inspection Notes (Optional)</label>
-                        <textarea name="notes" rows="2" placeholder="E.g., Checking roof valley, siding wear, or gutters..."></textarea>
-                    </div>
-                    <button type="submit" class="form-btn">Schedule Free Inspection</button>
-                </form>
-            </div>
-
-            <div id="formSuccess" class="form-success-message">
-                <div class="success-icon">✓</div>
-                <h3>Request Sent Successfully!</h3>
-                <p>Thank you. Your request has been sent straight to durkben@gmail.com. We will contact you shortly.</p>
-            </div>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="(920) 555-0199" required>
+                </div>
+                <div class="form-group">
+                    <label>Property Address</label>
+                    <input type="text" name="address" placeholder="Street Address, City" required>
+                </div>
+                <div class="form-group">
+                    <label>Inspection Notes (Optional)</label>
+                    <textarea name="notes" rows="2" placeholder="E.g., Checking roof valley, siding wear, or gutters..."></textarea>
+                </div>
+                <button type="submit" class="form-btn">Schedule Free Inspection</button>
+            </form>
         </div>
     </section>
 
@@ -307,151 +277,3 @@
         </div>
         <div class="process-steps">
             <div class="step">
-                <div class="step-num">01</div>
-                <h3>Request Scan</h3>
-                <p>Call us or fill out the form above. We schedule a quick visit to inspect your home's exterior envelope.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">02</div>
-                <h3>Aerial Inspection</h3>
-                <p>Our high-tech drone captures crisp 4K visual imagery of your roof, upper siding, soffits, and gutters.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">03</div>
-                <h3>Receive Report</h3>
-                <p>Get a comprehensive visual assessment report. If maintenance is needed, you receive an itemized estimate with zero pressure.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="reviews-section" id="reviews">
-        <div class="section-title">
-            <h2>Customer Reviews & Feedback</h2>
-            <p>We value honest transparency. Have we inspected your home? Leave a review below!</p>
-        </div>
-        <div class="review-layout">
-            <div class="review-form-card">
-                <h3 style="margin-bottom: 15px; color: var(--dark);">Leave a Verified Review</h3>
-                <form id="reviewForm">
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" id="reviewerName" placeholder="e.g. Jane D." required>
-                    </div>
-                    <div class="form-group">
-                        <label>Rating</label>
-                        <select id="reviewerRating" required>
-                            <option value="5">★★★★★ (5/5)</option>
-                            <option value="4">★★★★☆ (4/5)</option>
-                            <option value="3">★★★☆☆ (3/5)</option>
-                            <option value="2">★★☆☆☆ (2/5)</option>
-                            <option value="1">★☆☆☆☆ (1/5)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Your Feedback</label>
-                        <textarea id="reviewerComment" rows="4" placeholder="How was your roof and siding inspection experience?" required></textarea>
-                    </div>
-                    <button type="submit" class="form-btn">Submit Review</button>
-                </form>
-            </div>
-
-            <div class="reviews-display">
-                <h3 style="margin-bottom: 15px; color: var(--dark);">Recent Client Feedback</h3>
-                <div id="reviewsList">
-                    <p class="no-reviews">No customer reviews published yet. Be the first to leave feedback using the form!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <h2>Ready To Check Your Home?</h2>
-        <p>Protect your roof, siding, and investment with a $0 out-of-pocket drone inspection today.</p>
-        <a href="tel:9202646589" class="nav-phone" style="font-size: 1.2rem; padding: 15px 35px;">Call (920) 264-6589</a>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div>
-                <div class="footer-brand">kWh <span>Aerial Works</span></div>
-                <p style="margin-top: 5px;">Advanced Drone Roof & Exterior Inspections</p>
-            </div>
-            <div>
-                <p><strong>Direct Line:</strong> (920) 264-6589</p>
-                <p><strong>Email:</strong> durkben@gmail.com</p>
-            </div>
-            <div>
-                <p>&copy; 2026 kWh Aerial Works. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // AJAX Form Submission Handler (Sends straight to durkben@gmail.com without opening mail app)
-        const inspectionForm = document.getElementById('inspectionForm');
-        inspectionForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const formData = new FormData(inspectionForm);
-            
-            try {
-                const response = await fetch(inspectionForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    document.getElementById('formWrapper').style.display = 'none';
-                    document.getElementById('formSuccess').style.display = 'block';
-                } else {
-                    alert('There was a problem submitting your request. Please call us directly at (920) 264-6589.');
-                }
-            } catch (error) {
-                alert('Network error. Please try again or call us.');
-            }
-        });
-
-        // Live Reviews System
-        const reviewForm = document.getElementById('reviewForm');
-        const reviewsList = document.getElementById('reviewsList');
-
-        function loadReviews() {
-            const savedReviews = JSON.parse(localStorage.getItem('kwh_reviews') || '[]');
-            if (savedReviews.length > 0) {
-                reviewsList.innerHTML = '';
-                savedReviews.forEach(rev => {
-                    const stars = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
-                    const reviewEl = document.createElement('div');
-                    reviewEl.className = 'user-review';
-                    reviewEl.innerHTML = `
-                        <div class="name">${rev.name}</div>
-                        <div class="stars">${stars}</div>
-                        <div class="comment">${rev.comment}</div>
-                    `;
-                    reviewsList.prepend(reviewEl);
-                });
-            } else {
-                reviewsList.innerHTML = '<p class="no-reviews">No customer reviews published yet. Be the first to leave feedback using the form!</p>';
-            }
-        }
-
-        reviewForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('reviewerName').value;
-            const rating = parseInt(document.getElementById('reviewerRating').value);
-            const comment = document.getElementById('reviewerComment').value;
-
-            const newReview = { name, rating, comment };
-            const savedReviews = JSON.parse(localStorage.getItem('kwh_reviews') || '[]');
-            savedReviews.push(newReview);
-            localStorage.setItem('kwh_reviews', JSON.stringify(savedReviews));
-
-            reviewForm.reset();
-            loadReviews();
-            alert('Thank you for leaving your feedback!');
-        });
-
-        loadReviews();
-    </script>
-</body>
-</html>
